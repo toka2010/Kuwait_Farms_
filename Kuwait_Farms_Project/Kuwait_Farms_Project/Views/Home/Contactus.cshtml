@@ -1,0 +1,62 @@
+﻿@model Kuwait_Farms_Project.Models.ContactUs
+@{
+    ViewBag.Title = "Contactus";
+}
+
+<div>
+    <div style=" background: url('../image/9.jfif'); background-repeat: no-repeat; background-size: cover;   ">
+        <div class="contactall">
+            <div class="contactsection">
+                <div class="contactinfo">
+
+
+
+
+                </div>
+                <div class="contactform">
+
+                    <h1>Contact Us</h1>
+
+
+                    @using (Html.BeginForm(actionName: "Contactus", controllerName: "Home", method: FormMethod.Post, htmlAttributes: new { @class = "contact" }))
+                    {
+
+
+                        @Html.EditorFor(ww => ww.Name, additionalViewData: new { htmlAttributes = new { @class = "text-box", PlaceHolder = "Name" } })
+                        @Html.ValidationMessageFor(ww => ww.Name, "", htmlAttributes: new { @class = "text-danger errmsg" })
+
+                        @Html.EditorFor(ww => ww.Email, additionalViewData: new { htmlAttributes = new { @class = "text-box", PlaceHolder = "Email" } })
+                        @Html.ValidationMessageFor(ww => ww.Email, "", htmlAttributes: new { @class = "text-warning errmsg" })
+
+
+                        @Html.TextAreaFor(ww => ww.Message, new { @class = "form-control", PlaceHolder = " Your Message", @rows = 5 })
+                        @Html.ValidationMessageFor(ww => ww.Message, "", htmlAttributes: new { @class = "text-danger errmsg" })
+                        <div class="col-sm-9" style="margin-left:160px;">
+                            <label class="text-warning"> @Html.DisplayFor(w => w.ContacterrorMsg) </label>
+                        </div>
+
+                        <input type="submit" value="Send" class="Send-btn" required>
+
+
+                    }
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div>
+        <!-- Footer -->
+        <footer class="py-4 bg-dark">
+            <div class="container">
+                <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+            </div>
+            <!-- /.container -->
+        </footer>
+    </div>
+

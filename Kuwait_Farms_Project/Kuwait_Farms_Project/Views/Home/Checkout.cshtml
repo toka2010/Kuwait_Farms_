@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "Checkout";
+}
+
+
+<div>
+    <div style=" background: url('../image/5656.jfif');  background-repeat: no-repeat; background-size: cover;    ">
+        <div class="checkoutpage">
+
+            <div class="checkform">
+                <h1 style="margin-top: 40px; margin-bottom: 20px; margin-left: 50px;">Check Out</h1>
+
+                <form action="/Home/Checkout2" method="post">
+                    <div class="form-group row">
+
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" placeholder=" Name of Card">
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="Card Number ">
+                        </div>
+                        <div class="col-sm-10">
+                            <div class="col-sm-6" style="display: inline-block;">
+                                <input type="date" class="form-control" placeholder="Card Number " value="MM / dd / YY">
+                            </div>
+                            <div class="col-sm-5" style="display: inline-block;">
+                                <input type="number" class="form-control" placeholder="securty code">
+                            </div>
+                        </div>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" placeholder="Zip/postal Code">
+                        </div>
+                        <br />
+                        <br />
+                        <div style="margin-top: 60px; margin-right: 21px; display: block; ">
+                            <button type="submit" class="btn btn-success" style="display: block;">Send</button>
+                        </div>
+
+
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+<div>
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
+
+
+
+

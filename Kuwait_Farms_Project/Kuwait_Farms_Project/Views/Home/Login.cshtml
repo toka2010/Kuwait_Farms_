@@ -1,0 +1,61 @@
+﻿@model Kuwait_Farms_Project.Models.User
+@{
+    ViewBag.Title = "Login";
+}
+
+
+    <div style=" background: url('../image/5656.jfif'); background-repeat: no-repeat; background-size: cover;   ">
+        <div class="logall"  >
+          <div class="logsection">
+              <div class="loginfo">
+               
+     <!--   <img src="image/45.jfif"  style="width: 100%; height: 100%;" />  -->
+                
+       
+              </div>
+              <div class="logform">
+
+                  <h1>lOG IN</h1>
+
+                  @using (Html.BeginForm(actionName: "Login", controllerName: "Home", method: FormMethod.Post, htmlAttributes: new { @class = "log" }))
+                  {
+                      @Html.EditorFor(ww => ww.Email, additionalViewData: new { htmlAttributes = new { @class = "text-box", PlaceHolder = "Email" } })
+                      <br />
+                      @Html.ValidationMessageFor(ww => ww.Email, "", htmlAttributes: new { @class = "text-danger errmsg" })
+                      <br />
+                      @Html.EditorFor(ww => ww.Password, additionalViewData: new { htmlAttributes = new { @class = "text-box", PlaceHolder = "Password" } })
+                      <br />
+                      @Html.ValidationMessageFor(ww => ww.Password, "", htmlAttributes: new { @class = "text-danger errmsg" })
+
+                      <br />
+                      <div class="col-sm-9 ">
+                          <a href="/Home/Signup" style="color: #3ba068; text-decoration: none; padding-left: 72px; font-size: 19px;"> Create anew account?</a>
+
+                      </div>
+                      <input type="submit" value="Login" class="Send-btn" required>
+
+
+
+                  }
+                  </div>
+       
+          </div>
+       
+       </div>
+</div>
+
+
+
+
+
+<div>
+    <!-- Footer -->
+            <footer class="py-4 bg-dark">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+
+

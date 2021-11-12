@@ -1,0 +1,58 @@
+﻿@model  Kuwait_Farms_Project.Models.User
+@{
+    ViewBag.Title = "profile";
+}
+
+
+<div>
+    <div style=" background: url('../image/5656.jfif'); background-repeat: no-repeat; background-size: cover; ">
+
+        <div class="student-profile py-3">
+            <div class="container" style="margin-top: 10%; margin-bottom: 10%; ">
+                <div class="row" style="margin-left: 600px;">
+                    <div class="col-lg-4">
+                        <div class="card shadow-sm">
+                            <div class="card-header bg-transparent text-center">
+                                @if (Session["type"] == "admin")
+                                {
+                                    <img class="profile_img" src="~/image/admin.png" alt="student dp">
+                                }
+                                else
+                                {
+                                    <img class="profile_img" src="~/image/user.png" alt="student dp">
+                                }
+                                <h3>  @Model.Name</h3>
+                                <h4>@Model.Type</h4>
+                            </div>
+                            <div class="card-body">
+                                <p class="mb-0"><strong class="pr-1">Email:</strong>@Model.Email</p>
+                                <p class="mb-0"><strong class="pr-1">BirthDate:</strong>@Model.BirthDate</p>
+                                <p class="mb-0"><strong class="pr-1">Phone:</strong>@Model.Phone</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div>
+            <!-- Footer -->
+            <footer class="py-4 bg-dark">
+                <div class="container">
+                    <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+
+
+
+
+
+
+

@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Kuwait_Farms_Project.Models.Product>
+@{
+    ViewBag.Title = "MyCart";
+}
+<div style="margin-bottom:100px; margin-top:9%">
+    <div style="float: right; width: 150px; height: 150; border: 1px solid; padding: 10px; box-shadow: 1px 1px  1px 1px gray; ">
+        <label>Total:</label>
+
+        <label>  @Session["total"] </label>
+        <a href="/Home/Checkout"><button type="button" class="btn btn-success"><i class="fas fa-cash-register"></i> Checkout</button></a>
+    </div>
+</div>
+<div style="max-width: 96%; margin-left: 0%; margin-top: 9%;">
+    
+    <div class="row row-cols-2 row-cols-md-3">
+
+        @foreach (var item in Model)
+        {
+
+
+            <div class="col mb-3" style="width: 19rem; ">
+                <div class="card h-100" style="width: 20rem;  height: 20rem ">
+                    <img src="~/image/@item.Image" class="card-img-top" alt="..." style=" height: 20rem ">
+                    <div class="card-body">
+                        <h5 class="card-title" style="text-align: center;">@item.ProductName</h5>
+                        <h6>Price: @item.Price KD</h6>
+                        <form action="/Home/delete?n=@item.Id" method="post">
+                            <H3 style="text-align: right;"> <button type="submit" style="background-color:white; border:none">  <i class="far fa-trash-alt" style="color:red"></i> </button></H3>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<div  style="margin-top:40%">
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
+
+
+
+
+

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Kuwait_Farms_Project.Models.Product>
+@{
+    ViewBag.Title = "Productaadmin";
+}
+
+<div style="max-width: 96%; margin-left: 0%; margin-top: 9%;">
+    <div class="row row-cols-2 row-cols-md-4">
+
+        @foreach (var item in Model)
+        {
+
+                <div class="col mb-3" style="width: 19rem; ">
+                    <div class="card h-100" style="width: 20rem;  height: 20rem ">
+                        <img src="~/image/@item.Image" class="card-img-top" alt="..." style=" height: 20rem ">
+                        <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">@item.ProductName</h5>
+                            <h6>Price: @item.Price KD</h6>
+                            <span style="color:orangered">Quntity: @item.Quntity</span>
+                            <form action="/Home/add?n=@item.Id" method="post">
+                                <H3 style="text-align: right;"> <button type="submit" style="background-color:white; border:none">  <i class="fas fa-plus-circle" style="color:dodgerblue"></i> </button></H3>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
+            }
+
+
+
+        
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+<div>
+    <!-- Footer -->
+    <footer class="py-4 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy;  Kuwait farms 2021</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+</div>
+
+
+
+
+
